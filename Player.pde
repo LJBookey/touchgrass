@@ -1,6 +1,8 @@
 class Player {
     PVector loc = new PVector(SCREENHEIGHT/2, SCREENWIDTH/2);
     PVector vel = new PVector(0, 0);
+
+    int speed;
     
     int height;
     int width; 
@@ -14,17 +16,40 @@ class Player {
     Player(int height, int width){
         this.height = height;
         this.width = width;
+        this.speed = 2;
     }
 
     public void draw() {
         ellipse(loc.x, loc.y, width, height);
     }
 
+    public void move() {
+        if () {
+
+        }
+    }
+
     public void ifKeyPressed() {
         if (keyCode == LEFT) {
             moveLeft = true;
         } else if (keyCode == RIGHT) {
-            moveRIght = true;
+            moveRight = true;
+        } else if (keyCode == UP) {
+            moveUp = true;
+        } else if (keyCode == DOWN) {
+            moveDown = true;
+        }
+    }
+
+    public void ifKeyReleased() {
+        if (keyCode == LEFT) {
+            moveLeft = false;
+        } else if (keyCode == RIGHT) {
+            moveRight = false;
+        } else if (keyCode == UP) {
+            moveUp = false;
+        } else if (keyCode == DOWN) {
+            moveDown = false;
         }
     }
 
