@@ -26,3 +26,7 @@ public void draw() {
 void keyPressed() {
   p.ifKeyPressed();
 } 
+
+void keyReleased() {
+  p.ifKeyReleased();
+}

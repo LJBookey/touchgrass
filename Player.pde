@@ -28,15 +28,15 @@ class Player {
             loc.x = loc.x - speed;
         } 
 
-        if (moveRight && loc.x < SCREENWIDTH) {
+        if (moveRight && loc.x < SCREENWIDTH + width) {
             loc.x = loc.x + speed;
         }
 
-        if (moveUp && loc.y > 0 ) {
+        if (moveUp && loc.y > 0) {
             loc.y = loc.y - speed;
         }
 
-        if (moveDown && loc.y < SCREENHEIGHT) {
+        if (moveDown && loc.y < SCREENHEIGHT + height) {
             loc.y = loc.y + speed;
         }
     }
@@ -63,6 +63,10 @@ class Player {
         } else if (keyCode == DOWN) {
             moveDown = false;
         }
+    }
+
+    public PVector getPos() {
+        return this.loc;
     }
 
 
