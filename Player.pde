@@ -24,8 +24,20 @@ class Player {
     }
 
     public void move() {
-        if () {
+        if (moveLeft && loc.x > 0) {
+            loc.x = loc.x - speed;
+        } 
 
+        if (moveRight && loc.x < SCREENWIDTH) {
+            loc.x = loc.x + speed;
+        }
+
+        if (moveUp && loc.y > 0 ) {
+            loc.y = loc.y - speed;
+        }
+
+        if (moveDown && loc.y < SCREENHEIGHT) {
+            loc.y = loc.y + speed;
         }
     }
 
